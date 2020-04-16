@@ -53,28 +53,15 @@ struct UserDetail: View {
                 Text("Friends:")
                     .font(.headline)
                 ForEach(user.friends) { friend in
-                    self.friendRow(friend: friend)
+                    NavigationLink(destination: UserDetail(user: self.model.user(for: friend.id)!)) {
+                        Text(friend.name)
+                    }
                 }
                 Spacer()
             }
         }
         .padding()
         .navigationBarTitle(user.name)
-    }
-    
-    func friendRow(friend: User.Friend) -> some View {
-        let user = model.user(for: friend.id)
-        
-        return Group {
-            if user != nil {
-                NavigationLink(destination: UserDetail(user: user!)) {
-                    Text(friend.name)
-                }
-            }
-            else {
-                Text(friend.name)
-            }
-        }
     }
 }
 
