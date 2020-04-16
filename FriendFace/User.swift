@@ -60,7 +60,6 @@ func fetchUsers(completion: @escaping ([User]) -> Void) {
             let jsonDecoder = JSONDecoder()
             jsonDecoder.dateDecodingStrategy = .iso8601
             let users = try jsonDecoder.decode([User].self, from: data)
-            print("Load \(users.count) users")
             
             DispatchQueue.main.async {
                 completion(users)

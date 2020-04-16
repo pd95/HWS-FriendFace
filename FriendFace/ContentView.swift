@@ -37,11 +37,6 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("Users")
-            .onAppear(perform: {
-                fetchUsers { (users) in
-                    self.model.allUsers = users
-                }
-            })
         }
     }
 }

@@ -13,6 +13,12 @@ class Model: ObservableObject {
 
     @Published var allUsers = [User]()
     
+    init() {
+        fetchUsers { (users) in
+            self.allUsers = users
+        }
+    }
+    
     func user(for id: UUID) -> User? {
         let user = allUsers.first { $0.id == id }
         if user == nil {
