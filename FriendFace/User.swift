@@ -28,6 +28,7 @@ struct User: Identifiable, Codable {
 func fetchUsers(completion: @escaping ([User]) -> Void) {
     
     let url = URL(string: "https://www.hackingwithswift.com/samples/friendface.json")!
+    print("Fetching users from \(url)")
 
     URLSession.shared.dataTask(with: url) { (data, response, error) in
         if let error = error {

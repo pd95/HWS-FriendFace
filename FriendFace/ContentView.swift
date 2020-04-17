@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct UserRow: View {
-    let user: User
+    let user: StoredUser
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -27,11 +27,15 @@ struct UserRow: View {
 }
 
 struct ContentView: View {
-    @EnvironmentObject var model: Model
+
+    @Environment(\.managedObjectContext) var moc
+    @FetchRequest(entity: StoredUser.entity(), sortDescriptors: [
+        NSSortDescriptor(keyPath: \StoredUser.name, ascending: true)
+    ]) var storedUsers: FetchedResults<StoredUser>
     
     var body: some View {
         NavigationView {
-            List(model.allUsers) { user in
+            List(storedUsers) { user in
                 NavigationLink(destination: UserDetail(user: user)) {
                     UserRow(user: user)
                 }

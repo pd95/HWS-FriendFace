@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		177672D22449075E00D49966 /* FriendFace.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 177672D02449075E00D49966 /* FriendFace.xcdatamodeld */; };
+		177672DF2449108500D49966 /* StoredUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177672DD2449108500D49966 /* StoredUser+CoreDataProperties.swift */; };
+		177672E02449108500D49966 /* StoredUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 177672DE2449108500D49966 /* StoredUser+CoreDataClass.swift */; };
 		17F998B12448BF7500E8B2EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F998B02448BF7500E8B2EA /* AppDelegate.swift */; };
 		17F998B32448BF7500E8B2EA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F998B22448BF7500E8B2EA /* SceneDelegate.swift */; };
 		17F998B52448BF7500E8B2EA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F998B42448BF7500E8B2EA /* ContentView.swift */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		177672D12449075E00D49966 /* FriendFace.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FriendFace.xcdatamodel; sourceTree = "<group>"; };
+		177672DD2449108500D49966 /* StoredUser+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoredUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		177672DE2449108500D49966 /* StoredUser+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "StoredUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		17F998AD2448BF7500E8B2EA /* FriendFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17F998B02448BF7500E8B2EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17F998B22448BF7500E8B2EA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,8 +79,11 @@
 				17F998CA2448FAC500E8B2EA /* Model.swift */,
 				17F998B42448BF7500E8B2EA /* ContentView.swift */,
 				17F998CC2448FAEE00E8B2EA /* UserDetail.swift */,
-				17F998C62448FA2D00E8B2EA /* friendface.json */,
+				177672DE2449108500D49966 /* StoredUser+CoreDataClass.swift */,
+				177672DD2449108500D49966 /* StoredUser+CoreDataProperties.swift */,
 				17F998B62448BF7600E8B2EA /* Assets.xcassets */,
+				17F998C62448FA2D00E8B2EA /* friendface.json */,
+				177672D02449075E00D49966 /* FriendFace.xcdatamodeld */,
 				17F998BB2448BF7600E8B2EA /* LaunchScreen.storyboard */,
 				17F998BE2448BF7700E8B2EA /* Info.plist */,
 				17F998B82448BF7600E8B2EA /* Preview Content */,
@@ -162,12 +171,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177672DF2449108500D49966 /* StoredUser+CoreDataProperties.swift in Sources */,
 				17F998B12448BF7500E8B2EA /* AppDelegate.swift in Sources */,
 				17F998CD2448FAEE00E8B2EA /* UserDetail.swift in Sources */,
 				17F998B32448BF7500E8B2EA /* SceneDelegate.swift in Sources */,
 				17F998B52448BF7500E8B2EA /* ContentView.swift in Sources */,
+				177672E02449108500D49966 /* StoredUser+CoreDataClass.swift in Sources */,
 				17F998CB2448FAC500E8B2EA /* Model.swift in Sources */,
 				17F998C92448FA3F00E8B2EA /* User.swift in Sources */,
+				177672D22449075E00D49966 /* FriendFace.xcdatamodeld in Sources */,
 				17F998C52448FA0A00E8B2EA /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,6 +374,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		177672D02449075E00D49966 /* FriendFace.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				177672D12449075E00D49966 /* FriendFace.xcdatamodel */,
+			);
+			currentVersion = 177672D12449075E00D49966 /* FriendFace.xcdatamodel */;
+			path = FriendFace.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 17F998A52448BF7500E8B2EA /* Project object */;
 }

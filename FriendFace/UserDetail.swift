@@ -32,7 +32,7 @@ struct InformationView: View {
 struct UserDetail: View {
     @EnvironmentObject var model: Model
 
-    let user: User
+    let user: StoredUser
     
     var body: some View {
         ScrollView {
@@ -53,7 +53,7 @@ struct UserDetail: View {
                 Text("Friends:")
                     .font(.headline)
                 ForEach(user.friends) { friend in
-                    NavigationLink(destination: UserDetail(user: self.model.user(for: friend.id)!)) {
+                    NavigationLink(destination: UserDetail(user: friend)) {
                         Text(friend.name)
                     }
                 }
@@ -68,9 +68,15 @@ struct UserDetail: View {
 struct UserDetail_Previews: PreviewProvider {
     static var users: [User] = Bundle.main.decode("friendface.json")
     
+    static var storedUser: StoredUser {
+        let storedUser = StoredUser()
+        storedUser.populate(from: users.first!)
+        return storedUser
+    }
+    
     static var previews: some View {
         NavigationView {
-            UserDetail(user: users.first!)
+            UserDetail(user: storedUser)
         }
     }
 }
